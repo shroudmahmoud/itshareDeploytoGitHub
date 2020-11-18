@@ -11,6 +11,8 @@ const routes: Routes = [
   { path: "admin/order", component: AdminOrdersComponent },
   { path: "admin/product", component: ProductsComponent },
   { path: "shopping-cart", component: ShoppingCartComponent },
+  { path: "shopping-cart", component: ShoppingCartComponent },
+
 
 
 
