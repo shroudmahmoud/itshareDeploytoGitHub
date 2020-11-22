@@ -10,6 +10,15 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { LoginComponent } from './login/login.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+
+
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +28,22 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    LoginComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase),
+
+
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
